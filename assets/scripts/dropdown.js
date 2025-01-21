@@ -1,6 +1,6 @@
 const dropdown = document.querySelector('.menu'),
 submenu = document.querySelector('.sub-menu'),
-buttonClick = document.querySelector('.checkbutton'),
+buttonClick = document.querySelector('.check-button'),
 hamburger = document.querySelector('.menu-icon');
 
 buttonClick.addEventListener('click', () => {
