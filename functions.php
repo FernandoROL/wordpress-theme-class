@@ -2,10 +2,10 @@
 
 function wpdevs_load_scripts()
 {
-    wp_enqueue_style('font-loader', get_template_directory_uri() . '/assets/css/font-loader.css', [], 1.0);
-    wp_enqueue_style('base-style-sheet', get_template_directory_uri() . '/assets/css/base.css', [], 1.0);
-    wp_enqueue_style('main_style', get_template_directory_uri() . '/assets/css/main.css', [], the_date(), 'all');
-    wp_enqueue_script('dropdown-script', get_template_directory_uri() . '/assets/scripts/dropdown.js', [], 1.0, true);
+    wp_enqueue_style('font-loader', get_template_directory_uri() . '/assets/css/font-loader.css', [], rand(111,9999));
+    wp_enqueue_style('base-style-sheet', get_template_directory_uri() . '/assets/css/base.css', [], rand(111,9999));
+    wp_enqueue_style('main_style', get_template_directory_uri() . '/assets/css/main.css', [], rand(111,9999), 'all');
+    wp_enqueue_script('dropdown-script', get_template_directory_uri() . '/assets/scripts/dropdown.js', [], rand(111,9999), true);
 }
 
 add_action('wp_enqueue_scripts', 'wpdevs_load_scripts');
