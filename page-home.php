@@ -6,32 +6,68 @@
 
             </section>
             <section class="services">
-                
-            </section>
-            <section class="home-blog">
+                <h2>Services</h2>
                 <div class="container">
-                    <div class="blog-items">
+                    <div class="services-item">
                         <?php
-                        if (have_posts()):
-                            while (have_posts()) : the_post();
+                        if (is_active_sidebar('services-1')) {
+                            dynamic_sidebar('services-1');
+                        }
                         ?>
-                                <article>
-                                    <h2><?php the_title() ?></h2>
-                                    <div class="meta-info">
-                                        <p>Posted in <?php echo get_the_date() ?> by <?php the_author_posts_link() ?></p>
-                                        <p>Categories: <?php the_category(' ') ?></p>
-                                        <p>Tags: <?php the_tags('', ', ') ?></p>
-                                    </div>
-                                    <?php the_content() ?>
-                                </article>
-                            <?php
-                            endwhile;
-                        else:
-                            ?>
-                            <p>No post yet...</p>
-                        <?php endif; ?>
+                    </div>
+                    <div class="services-item">
+                        <?php
+                        if (is_active_sidebar('services-2')) {
+                            dynamic_sidebar('services-2');
+                        }
+                        ?>
+                    </div>
+                    <div class="services-item">
+                        <?php
+                        if (is_active_sidebar('services-3')) {
+                            dynamic_sidebar('services-3');
+                        }
+                        ?>
                     </div>
                 </div>
+            </section>
+            <section class="home-blog">
+                <h2>Latest News</h2>
+                <div class="container">
+                    <?php
+
+                    $args = [
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                        'category__in' => [7, 6, 5, 8],
+                        'category__not_in' => [1],
+                    ];
+
+                    $postlist = new WP_Query($args);
+
+                    if ($postlist->have_posts()):
+                        while ($postlist->have_posts()) : $postlist->the_post();
+                        ?>
+                            <article class='latest-news''>
+                                <?php the_post_thumbnail('large') ?>
+                                <h3><?php the_title() ?></h3>
+                                <div class="meta-info">
+                                    <p>
+                                        by <span><?php the_author_posts_link() ?></span>
+                                        Categories: <span><?php the_category(' ')  ?></span>
+                                        Tags: <span><?php the_tags('', ', ') ?></span>
+                                    </p>
+                                    <p><span><?php echo get_the_date() ?></span></p>
+                                </div>
+                                <?php the_excerpt() ?>
+                            </article>
+                            <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    else: ?>
+                        <p>No post yet...</p>
+                        <?php endif; ?>
+                    </div>
 
             </section>
         </main>

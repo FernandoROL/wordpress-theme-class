@@ -23,7 +23,7 @@ function main_config()
     ];
 
     add_theme_support('custom-header', $args);
-    add_theme_support( 'post-thumbnails' );
+    add_theme_support('post-thumbnails');
     add_theme_support('custom-logo', [
         'width' => 125,
         'height' => 90,
@@ -36,7 +36,8 @@ add_action('after_setup_theme', 'main_config', 0);
 
 add_action('widgets_init', 'class_sidebars');
 
-function class_sidebars(){
+function class_sidebars()
+{
     register_sidebar(
         [
             'name' => 'Blog Sidebar',
@@ -47,5 +48,38 @@ function class_sidebars(){
             'before_title' => '<h4 class="widget-title">',
             'after-title' => '</h4>'
         ]
-        );
+    );
+    register_sidebar(
+        [
+            'name'  => 'Service 1',
+            'id'    => 'services-1',
+            'description'   => 'First Service Area',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>'
+        ]
+    );
+    register_sidebar(
+        [
+            'name'  => 'Service 2',
+            'id'    => 'services-2',
+            'description'   => 'Second Service Area',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>'
+        ]
+    );
+    register_sidebar(
+        [
+            'name'  => 'Service 3',
+            'id'    => 'services-3',
+            'description'   => 'Third Service Area',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>'
+        ]
+    );
 }
