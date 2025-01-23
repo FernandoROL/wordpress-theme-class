@@ -56,8 +56,20 @@
                                 <div class="meta-info">
                                     <p>
                                         by <span><?php the_author_posts_link() ?></span>
-                                        Categories: <span><?php the_category(' ')  ?></span>
-                                        Tags: <span><?php the_tags('', ', ') ?></span>
+                                        Categories: <?php 
+                                            if(!get_categories()) {
+                                                ?> No Categories... <?php
+                                            } else {
+                                               ?>  <span><?php the_category(' ')  ?></span> <?php
+                                            }
+                                        ?> 
+                                        Tags: <?php 
+                                            if(!get_tags()) {
+                                                ?> <span>No Tags...</span> <?php
+                                            } else {
+                                               ?>  <span><?php the_tags('', ', ') ?></span> <?php
+                                            }
+                                        ?> 
                                     </p>
                                     <p><span><?php echo get_the_date() ?></span></p>
                                 </div>

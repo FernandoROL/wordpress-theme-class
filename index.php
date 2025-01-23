@@ -19,8 +19,24 @@
                                 </a>
                                 <div class="meta-info">
                                     <p>Posted in <?php echo get_the_date() ?> by <?php the_author_posts_link() ?></p>
-                                  p>Categories: <?php the_category(' ') ?></p>
-                                    <p>Tags: <?php the_tags('', ', ') ?></p>
+                                        <P>
+                                            Categories: <?php
+                                                if(!get_categories()) {
+                                                    ?> No Categories... <?php
+                                                } else {
+                                                   ?>  <span><?php the_category(' ')  ?></span> <?php
+                                                }
+                                            ?>
+                                        </P> 
+                                        <P>
+                                            Tags: <?php
+                                                if(!get_tags()) {
+                                                    ?> <span style="text-decoration: underline; color: rgb(120, 120, 120); cursor: not-allowed">No Tags...</span> <?php
+                                                } else {
+                                                   ?>  <span><?php the_tags('', ', ') ?></span> <?php
+                                                }
+                                            ?>
+                                        </P>
                                 </div>
                                 <?php the_excerpt() ?>
                             </article>

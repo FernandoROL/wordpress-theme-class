@@ -1,7 +1,7 @@
         <footer class="site-footer">
             <div class="container">
                 <div class="copyright">
-                    <p>Copyright X - All Rights Reserved</p>
+                    <p>Cool theme footer text</p>
                 </div>
                 <nav class="footer-menu">
                     <?php 

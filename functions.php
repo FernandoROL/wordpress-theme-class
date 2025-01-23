@@ -83,3 +83,12 @@ function class_sidebars()
         ]
     );
 }
+
+function custom_excerpt($lenght) {
+    add_filter('excerpt_length', fn() => $lenght);
+    return the_excerpt();
+}
+
+function custom_get_excerpt($lenght) {
+    return wp_trim_words(get_the_content(), $lenght, '[...] <a href='. get_the_permalink() .'>read more</a>');
+}
