@@ -38,10 +38,21 @@
                                             ?>
                                         </P>
                                 </div>
-                                <?php the_excerpt() ?>
+                                <?php custom_excerpt(20) ?>
                             </article>
                         <?php
                         endwhile;
+                        ?> 
+                            <!-- <div class="wpdevs-pagination">
+                                <div class="pages new">
+                                    <?php previous_posts_link('<< Previous page') ?>
+                                </div>
+                                <div class="pages old">
+                                    <?php next_posts_link('Next page >> ') ?>
+                                </div>
+                            </div> -->
+                        <?php
+                            the_posts_pagination();
                     else:
                         ?>
                         <p>No post yet...</p>

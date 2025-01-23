@@ -6,7 +6,7 @@
 
             </section>
             <section class="services">
-                <h2>Services</h2>
+                <h2>Our Services</h2>
                 <div class="container">
                     <div class="services-item">
                         <?php
@@ -73,7 +73,7 @@
                                     </p>
                                     <p><span><?php echo get_the_date() ?></span></p>
                                 </div>
-                                <?php the_excerpt() ?>
+                                <?php custom_excerpt(25) ?>
                             </article>
                             <?php
                         endwhile;
