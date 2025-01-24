@@ -10,24 +10,17 @@
             get_search_form();
 
             while (have_posts()):
-                the_post();?>
+                the_post(); ?>
                 <artticle id="post-<?php the_ID() ?>" <?php post_class() ?>>
                     <header>
                         <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                         <div class="meta-info">
-                            <?php 
-                            if (get_post_type() === "post") {
-                                ?> <p>Posted in <?php echo get_the_date() ?> by <?php the_author_posts_link() ?></p>
-                                <p>Categories: <?php the_category(', ') ?></p>
-                                <p>Tags: <?php 
-                                            if(!get_tags()) {
-                                                ?> <span>No Tags...</span> <?php
-                                            } else {
-                                               ?>  <span><?php the_tags('', ', ') ?></span> <?php
-                                            }
-                                        ?> </p> <?php
-                            }
-                            ?>
+                            <?php
+                            ?> <p>Posted in <?php echo get_the_date() ?> by <?php the_author_posts_link() ?></p>
+                            <p>Categories: <span <?php if (!has_category()) echo 'class="no-tags"' ?>><?php the_category(', ');
+                                                                                                        if (!has_category()) echo "No categories..." ?></span></p>
+                            <p>Tags: <span <?php if (!has_tag()) echo 'class="no-tags"' ?>><?php the_tags('', ', ');
+                                                                                            if (!has_tag()) echo "No tags..." ?></span></p>
                         </div>
                     </header>
                     <div>

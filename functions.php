@@ -1,5 +1,7 @@
 <?php
 
+require get_template_directory() . '/inc/customizer.php';
+
 function wpdevs_load_scripts()
 {
     wp_enqueue_style('font-loader', get_template_directory_uri() . '/assets/css/font-loader.css', [], rand(111,9999));

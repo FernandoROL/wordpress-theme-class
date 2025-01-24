@@ -6,20 +6,8 @@
     <div class="meta-info">
         <p>
             by <span><?php the_author_posts_link() ?></span>
-            Categories: <?php 
-                if(!get_categories()) {
-                    ?> No Categories... <?php
-                } else {
-                    ?>  <span><?php the_category(', ')  ?></span> <?php
-                }
-            ?> 
-            Tags: <?php 
-                if(!get_tags()) {
-                    ?> <span class="no-tags">No Tags...</span> <?php
-                } else {
-                    ?>  <span><?php the_tags('', ', ') ?></span> <?php
-                }
-            ?> 
+            Categories: <span <?php if(!has_category()) echo 'class="no-tags"' ?> ><?php the_category(', '); if(!has_category()) echo "No categories..." ?></span>
+            Tags: <span <?php if(!has_tag()) echo 'class="no-tags"' ?> ><?php the_tags('', ', '); if(!has_tag()) echo "No tags..." ?></span>
         </p>
         <p><span><?php echo get_the_date() ?></span></p>
     </div>

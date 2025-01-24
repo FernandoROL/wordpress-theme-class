@@ -1,7 +1,7 @@
 <footer class="site-footer">
             <div class="container">
                 <div class="copyright">
-                    <p>Cool theme footer text</p>
+                    <p><?php echo get_theme_mod('set_copyright', '{Set your copyright field in the customizer}') ?></p>
                 </div>
                 <nav class="footer-menu">
                     <?php 

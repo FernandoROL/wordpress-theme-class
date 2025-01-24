@@ -2,9 +2,7 @@
 <div class="site-content" id="content">
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
-            <section class="hero">
-
-            </section>
+            <?php get_template_part('parts/home/widget', 'hero') ?>
             <section class="services">
                 <h2>Our Services</h2>
                 <div class="container">
