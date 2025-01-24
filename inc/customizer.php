@@ -1,6 +1,9 @@
 <?php 
 
 function wpdevs_customizer( $wp_customize ){
+
+    // Footer copyright section
+
     $wp_customize->add_section(
         'sec_copyright',
         [
@@ -8,6 +11,8 @@ function wpdevs_customizer( $wp_customize ){
             'description' => 'Copywrite Settings'
         ]
     );
+
+        // Footer copyright text
 
         $wp_customize->add_setting(
             'set_copyright',
@@ -161,6 +166,72 @@ function wpdevs_customizer( $wp_customize ){
             ]
         )
         );
+
+    // Blog section
+
+	$wp_customize->add_section( 
+        'sec_blog', 
+        [
+		    'title' => 'Blog Section'
+        ] 
+    );
+    
+            // Posts per page
+            $wp_customize->add_setting( 
+                'set_per_page', 
+                [
+                    'type' => 'theme_mod',
+                    'sanitize_callback' => 'absint'
+                ]
+            );
+
+            $wp_customize->add_control( 
+                'set_per_page', 
+                [
+                    'label' => 'Posts per page',
+                    'description' => 'How many items to display in the post list?',			
+                    'section' => 'sec_blog',
+                    'type' => 'number'
+                ] 
+            );
+
+            // Post categories to include
+            $wp_customize->add_setting( 
+                'set_category_include', 
+                [
+                    'type' => 'theme_mod',
+                    'sanitize_callback' => 'sanitize_text_field'
+                ] 
+            );
+
+            $wp_customize->add_control( 
+                'set_category_include', 
+                [
+                    'label' => 'Post categories to include',
+                    'description' => 'Comma separated values or single category ID',
+                    'section' => 'sec_blog',
+                    'type' => 'text'
+                ] 
+            );	
+
+            // Post categories to exclude
+            $wp_customize->add_setting( 
+                'set_category_exclude', 
+                [
+                    'type' => 'theme_mod',
+                    'sanitize_callback' => 'sanitize_text_field'
+                ] 
+            );
+
+            $wp_customize->add_control( 
+                'set_category_exclude', 
+                [
+                    'label' => 'Post categories to exclude',
+                    'description' => 'Comma separated values or single category ID',			
+                    'section' => 'sec_blog',
+                    'type' => 'text'
+                ] 
+            );
 }
 
 add_action('customize_register', 'wpdevs_customizer');
