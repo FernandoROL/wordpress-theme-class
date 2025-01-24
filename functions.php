@@ -30,6 +30,7 @@ function main_config()
         // 'flex-height' => true,
         // 'flex-width' => true
     ]);
+    add_theme_support( 'title-tag' );
 }
 
 add_action('after_setup_theme', 'main_config', 0);
@@ -82,7 +83,20 @@ function class_sidebars()
             'after_title'   => '</h4>'
         ]
     );
+    register_sidebar(
+        [
+            'name'  => 'Service 4',
+            'id'    => 'services-4',
+            'description'   => 'Fourth Service Area',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>'
+        ]
+    );
 }
+
+// Custom function to limit the lenght of the "the_excerpt" and "get_the_excerpt" functions 
 
 function custom_excerpt($lenght) {
     add_filter('excerpt_length', fn() => $lenght);
@@ -92,3 +106,18 @@ function custom_excerpt($lenght) {
 function custom_get_excerpt($lenght) {
     return wp_trim_words(get_the_content(), $lenght, '[...] <a href='. get_the_permalink() .'>read more</a>');
 }
+
+// Changing the default template folder for all my templates
+
+// function load_templates_from_custom_folder($template) {
+//     $custom_template_folder = get_stylesheet_directory() . '/page-templates';
+//     $template_file = basename($template);
+//     $custom_template = $custom_template_folder . $template_file;
+
+//     if (file_exists($custom_template)) {
+//         return $custom_template;
+//     }
+
+//     return $template;
+// }
+// add_filter('template_include', 'load_templates_from_custom_folder');

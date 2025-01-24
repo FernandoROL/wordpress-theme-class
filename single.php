@@ -7,20 +7,8 @@
             <?php
             while (have_posts()):
                 the_post();?>
-                <artticle id="post-<?php the_ID() ?>" <?php post_class() ?>>
-                    <header>
-                        <h1><?php the_title() ?></h1>
-                        <div class="meta-info">
-                            <p>Posted in <?php echo get_the_date() ?> by <?php the_author_posts_link() ?></p>
-                            <p>Categories: <?php the_category(', ') ?></p>
-                            <p>Tags: <?php the_tags('', ', ') ?></p>
-                        </div>
-                    </header>
-                    <div>
-                        <?php the_content() ?>
-                        <?php wp_link_pages() ?>
-                    </div>
-                </artticle>
+                
+                <?php get_template_part('parts/content', 'single') ?>
 
                 <div class="wpdevs-pagination">
                     <div class="pages next">

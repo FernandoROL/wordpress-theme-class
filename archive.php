@@ -3,16 +3,19 @@
 <div class="site-content" id="content">
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
-            <h1><?php wp_title('') ?></h1>
+        <?php the_archive_title('<h1 class="archive-title">', '</h1>') ?>
+        <?php the_archive_description('<div class="archive-description">', '</div>'); ?>
             <div class="container">
-                <div class="blog-items">
+                <div class="archive-items">
                     <?php
                     if (have_posts()):
                         while (have_posts()) : the_post();
-                            get_template_part('parts/content');
+                    ?>
+                            
+                        <?php
                         endwhile;
-                        the_posts_pagination();
-                        else:
+                            the_posts_pagination();
+                    else:
                         ?>
                         <p>No post yet...</p>
                     <?php endif; ?>

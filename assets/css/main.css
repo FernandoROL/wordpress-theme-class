@@ -3,15 +3,13 @@ html {
 }
 
 body {
-    background-color: #eee;
+    background-color: #fff;
 }
 
 .site, body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    overflow-y: unset;
 }
 
 footer {
