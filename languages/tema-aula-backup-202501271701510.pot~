@@ -1,0 +1,263 @@
+# Copyright (C) 2025 Fernando Lopes
+# This file is distributed under the same license as the Tema curso theme.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tema curso 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tema-aula\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-27T16:53:43+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: tema-aula\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Tema curso"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Testing creating a wp theme from scratch"
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Fernando Lopes"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://github.com/FernandoROL"
+msgstr ""
+
+#: 404.php:9
+msgid "404 Page not found"
+msgstr ""
+
+#: 404.php:10
+msgid "The page you tried to acces does not exist."
+msgstr ""
+
+#: 404.php:11
+msgid "How about going to the"
+msgstr ""
+
+#: 404.php:11
+msgid "Home page"
+msgstr ""
+
+#: 404.php:19
+msgid "Latest Posts"
+msgstr ""
+
+#: archive.php:20
+#: index.php:17
+msgid "No post yet..."
+msgstr ""
+
+#. translators: %s: Post title.
+#: comments.php:31
+msgid "Comments on"
+msgstr ""
+
+#: comments.php:36
+msgid "thought on"
+msgstr ""
+
+#: comments.php:37
+msgid "thoughts on"
+msgstr ""
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:22
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:23
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:50
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:52
+msgid "This is the Blog page sidebar. You can add your widgets here."
+msgstr ""
+
+#: functions.php:63
+msgid "First Service Area"
+msgstr ""
+
+#: functions.php:74
+msgid "Second Service Area"
+msgstr ""
+
+#: functions.php:85
+msgid "Third Service Area"
+msgstr ""
+
+#: functions.php:96
+msgid "Fourth Service Area"
+msgstr ""
+
+#: functions.php:113
+msgid "read more"
+msgstr ""
+
+#. Template Name of the theme
+msgid "General Template"
+msgstr ""
+
+#: general-template.php:24
+msgid "Nothing yet to be displayed!"
+msgstr ""
+
+#: inc/customizer.php:10
+#: inc/customizer.php:11
+msgid "Copyright Settings"
+msgstr ""
+
+#: inc/customizer.php:21
+msgid "Cool copyright footer text"
+msgstr ""
+
+#: inc/customizer.php:29
+msgid "Copyright information"
+msgstr ""
+
+#: inc/customizer.php:30
+msgid "Please, type your copyright here"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "Please add a title"
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "Hero title"
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "Type your title here"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Add your custom subtitle"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Hero subtitle"
+msgstr ""
+
+#: inc/customizer.php:81
+#: inc/customizer.php:102
+msgid "Type your subtitle here"
+msgstr ""
+
+#: inc/customizer.php:93
+msgid "Button text"
+msgstr ""
+
+#: inc/customizer.php:101
+msgid "Hero button text"
+msgstr ""
+
+#: inc/customizer.php:114
+msgid "Button link"
+msgstr ""
+
+#: inc/customizer.php:122
+#: inc/customizer.php:143
+msgid "Hero button link"
+msgstr ""
+
+#: inc/customizer.php:123
+msgid "Type your hero button link here"
+msgstr ""
+
+#: inc/customizer.php:144
+msgid "Hero height"
+msgstr ""
+
+#: inc/customizer.php:163
+msgid "Hero background image"
+msgstr ""
+
+#: inc/customizer.php:175
+msgid "Blog Section"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Posts per page"
+msgstr ""
+
+#: inc/customizer.php:192
+msgid "How many items to display in the post list?"
+msgstr ""
+
+#: inc/customizer.php:210
+msgid "Post categories to include"
+msgstr ""
+
+#: inc/customizer.php:211
+#: inc/customizer.php:230
+msgid "Comma separated values or single category ID"
+msgstr ""
+
+#: inc/customizer.php:229
+msgid "Post categories to exclude"
+msgstr ""
+
+#: page-home.php:7
+msgid "Our Services"
+msgstr ""
+
+#: parts/content-home.php:9
+msgid "Latest News"
+msgstr ""
+
+#: parts/content-single.php:5
+#: parts/content.php:9
+#: search.php:19
+msgid "Posted in %s by %s"
+msgstr ""
+
+#: parts/content-single.php:6
+#: parts/content.php:10
+#: search.php:20
+msgid "Categories:"
+msgstr ""
+
+#: parts/content-single.php:6
+#: parts/content.php:10
+#: search.php:20
+msgid "No categories..."
+msgstr ""
+
+#: parts/content-single.php:7
+#: parts/content.php:11
+#: search.php:21
+msgid "Tags:"
+msgstr ""
+
+#: parts/content-single.php:7
+#: parts/content.php:11
+#: search.php:21
+msgid "No tags..."
+msgstr ""
+
+#: search.php:7
+msgid "Search results for: %s"
+msgstr ""
+
+#: searchform.php:3
+msgid "Search for:"
+msgstr ""

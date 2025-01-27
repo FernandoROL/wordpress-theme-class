@@ -1,0 +1,253 @@
+# Copyright (C) 2025 Fernando Lopes
+# This file is distributed under the same license as the Tema curso theme.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tema curso 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tema-aula\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese (Brazil)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-27T16:53:43+00:00\n"
+"PO-Revision-Date: 2025-01-27 17:22+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: tema-aula\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.7.1; wp-6.7.1"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Tema curso"
+msgstr "Tema curso"
+
+#. Description of the theme
+#: style.css
+msgid "Testing creating a wp theme from scratch"
+msgstr "Testando criar um tema wp do zero"
+
+#. Author of the theme
+#: style.css
+msgid "Fernando Lopes"
+msgstr "Fernando Lopes"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://github.com/FernandoROL"
+msgstr "https://github.com/FernandoROL"
+
+#: 404.php:9
+msgid "404 Page not found"
+msgstr "404 Página não encontrada"
+
+#: 404.php:10
+msgid "The page you tried to acces does not exist."
+msgstr "A página que tentou acessar não existe"
+
+#: 404.php:11
+msgid "How about going to the"
+msgstr "Oque acha de ir para a"
+
+#: 404.php:11
+msgid "Home page"
+msgstr "Página principal"
+
+#: 404.php:19
+msgid "Latest Posts"
+msgstr "Últimos Posts"
+
+#: archive.php:20 index.php:17
+msgid "No post yet..."
+msgstr "Nenhum post ainda..."
+
+#. translators: %s: Post title.
+#: comments.php:31
+msgid "Comments on"
+msgstr "Comentários ligados"
+
+#: comments.php:36
+msgid "thought on"
+msgstr "pensamento sobre"
+
+#: comments.php:37
+msgid "thoughts on"
+msgstr "pensamentos em"
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr "Comentários fechados."
+
+#: functions.php:22
+msgid "Main Menu"
+msgstr "Menu Principal"
+
+#: functions.php:23
+msgid "Footer Menu"
+msgstr "Menu do rodapé"
+
+#: functions.php:50
+msgid "Blog Sidebar"
+msgstr "Barra Lateral do Blog"
+
+#: functions.php:52
+msgid "This is the Blog page sidebar. You can add your widgets here."
+msgstr ""
+"Esse é o menu lateral da página do Blog. Você pode adicionar seus widgets "
+"aqui."
+
+#: functions.php:63
+msgid "First Service Area"
+msgstr "Primeira área de serviço"
+
+#: functions.php:74
+msgid "Second Service Area"
+msgstr "Segunda área de serviço"
+
+#: functions.php:85
+msgid "Third Service Area"
+msgstr "Terceira área de serviço"
+
+#: functions.php:96
+msgid "Fourth Service Area"
+msgstr "Quarta área de serviço"
+
+#: functions.php:113
+msgid "read more"
+msgstr "leia mais"
+
+#. Template Name of the theme
+msgid "General Template"
+msgstr "Template geral"
+
+#: general-template.php:24
+msgid "Nothing yet to be displayed!"
+msgstr "Nada a mostrar!"
+
+#: inc/customizer.php:10 inc/customizer.php:11
+msgid "Copyright Settings"
+msgstr "Configurações dos Direitos Autorais"
+
+#: inc/customizer.php:21
+msgid "Cool copyright footer text"
+msgstr "Texto de direito autoral dahora, do rodapé"
+
+#: inc/customizer.php:29
+msgid "Copyright information"
+msgstr "Informações dos Direitos Autorais"
+
+#: inc/customizer.php:30
+msgid "Please, type your copyright here"
+msgstr "Adicione os direitos autorais"
+
+#: inc/customizer.php:51
+msgid "Please add a title"
+msgstr "Adicione um título"
+
+#: inc/customizer.php:59
+msgid "Hero title"
+msgstr "Título do Hero"
+
+#: inc/customizer.php:60
+msgid "Type your title here"
+msgstr "Digite o título aqui"
+
+#: inc/customizer.php:72
+msgid "Add your custom subtitle"
+msgstr "Adicionar subtítulo customizado"
+
+#: inc/customizer.php:80
+msgid "Hero subtitle"
+msgstr "Subtítulo do Hero"
+
+#: inc/customizer.php:81 inc/customizer.php:102
+msgid "Type your subtitle here"
+msgstr "Digite o subtítulo aqui"
+
+#: inc/customizer.php:93
+msgid "Button text"
+msgstr "Texto do botão"
+
+#: inc/customizer.php:101
+msgid "Hero button text"
+msgstr "Texto do botão do Hero"
+
+#: inc/customizer.php:114
+msgid "Button link"
+msgstr "Link do botão"
+
+#: inc/customizer.php:122 inc/customizer.php:143
+msgid "Hero button link"
+msgstr "Link do botão do hero"
+
+#: inc/customizer.php:123
+msgid "Type your hero button link here"
+msgstr "Digite o link do botão do Hero aqui"
+
+#: inc/customizer.php:144
+msgid "Hero height"
+msgstr "Altura do Hero"
+
+#: inc/customizer.php:163
+msgid "Hero background image"
+msgstr "Imagem de fundo do Hero"
+
+#: inc/customizer.php:175
+msgid "Blog Section"
+msgstr "Seção do Blog"
+
+#: inc/customizer.php:191
+msgid "Posts per page"
+msgstr "Postagens por página"
+
+#: inc/customizer.php:192
+msgid "How many items to display in the post list?"
+msgstr "Quantos itens mostrar na lista de posts?"
+
+#: inc/customizer.php:210
+msgid "Post categories to include"
+msgstr "Categorias de posts para incluir"
+
+#: inc/customizer.php:211 inc/customizer.php:230
+msgid "Comma separated values or single category ID"
+msgstr "Um ID de categoria ou IDs separados por vírgula"
+
+#: inc/customizer.php:229
+msgid "Post categories to exclude"
+msgstr "Categorias de posts para excluir "
+
+#: page-home.php:7
+msgid "Our Services"
+msgstr "Nossos Serviços"
+
+#: parts/content-home.php:9
+msgid "Latest News"
+msgstr "Últimas Notícias"
+
+#: parts/content-single.php:5 parts/content.php:9 search.php:19
+msgid "Posted in %s by %s"
+msgstr "Postado por %s por %s"
+
+#: parts/content-single.php:6 parts/content.php:10 search.php:20
+msgid "Categories:"
+msgstr "Categorias:"
+
+#: parts/content-single.php:6 parts/content.php:10 search.php:20
+msgid "No categories..."
+msgstr "Sem categorias..."
+
+#: parts/content-single.php:7 parts/content.php:11 search.php:21
+msgid "Tags:"
+msgstr "Tags: "
+
+#: parts/content-single.php:7 parts/content.php:11 search.php:21
+msgid "No tags..."
+msgstr "Sem tags..."
+
+#: search.php:7
+msgid "Search results for: %s"
+msgstr "Resultados da pesquisa por: %s"
+
+#: searchform.php:3
+msgid "Search for:"
+msgstr "Pesquisa por:"

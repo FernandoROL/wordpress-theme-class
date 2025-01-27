@@ -3,10 +3,10 @@
 $per_page = get_theme_mod('set_per_page', 3);
 $category_include = get_theme_mod('set_category_include');
 $category_exclude = get_theme_mod('set_category_exclude');
-
+    
 ?>
 
-<h2>Latest News</h2>
+<h2><?php _e('Latest News', 'tema-aula') ?> </h2>
 <div class="container">
     <?php
 
@@ -24,14 +24,14 @@ $category_exclude = get_theme_mod('set_category_exclude');
     <a href="<?php the_permalink() ?>">
         <?php the_post_thumbnail('large') ?>
     </a>
-    <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+    <h3><a href="<?php the_permalink() ?>"><?php _e(the_title(), 'tema-aula') ?></a></h3>
     <div class="meta-info">
         <p>
-            by <span><?php the_author_posts_link() ?></span>
-            Categories: <span <?php if (!has_category()) echo 'class="no-tags"' ?> ><?php the_category(', ');
-                                                                                    if (!has_category()) echo "No categories..." ?></span>
-            Tags: <span <?php if (!has_tag()) echo 'class="no-tags"' ?> ><?php the_tags('', ', ');
-                                                                            if (!has_tag()) echo "No tags..." ?></span>
+            <?php _e('by', 'tema-aula') ?> <span><?php the_author_posts_link() ?></span>
+            <?php _e('Categories', 'tema-aula') ?>: <span <?php if (!has_category()) echo 'class="no-tags"' ?> ><?php the_category(', ');
+                                                                                    if (!has_category()) echo __('No categories', 'tema-aula') ."..." ?></span>
+            <?php _e('Tags', 'tema-aula') ?> <span <?php if (!has_tag()) echo 'class="no-tags"' ?> ><?php the_tags('', ', ');
+                                                                            if (!has_tag()) echo __('No tags', 'tema-aula') ."..." ?></span>
         </p>
         <p><span><?php echo get_the_date() ?></span></p>
     </div>
@@ -41,6 +41,6 @@ $category_exclude = get_theme_mod('set_category_exclude');
         endwhile;
         wp_reset_postdata();
     else: ?>
-        <p>Nothing to display yet...</p>
+        <p><?php _e('Nothing to display yet...', 'tema-aula') ?></p>
     <?php endif; ?>
 </div>

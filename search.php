@@ -4,7 +4,7 @@
     <div id="main">
         <div class="container">
 
-            <h1>Search results for: <span>"<?php echo get_search_query() ?>"</span></h1>
+            <h1><?php printf(__('Search results for: %s', 'tema-aula'), '<span>"' . get_search_query() . '"</span>'); ?></h1>
             <?php
 
             get_search_form();
@@ -16,11 +16,9 @@
                         <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                         <div class="meta-info">
                             <?php
-                            ?> <p>Posted in <?php echo get_the_date() ?> by <?php the_author_posts_link() ?></p>
-                            <p>Categories: <span <?php if (!has_category()) echo 'class="no-tags"' ?>><?php the_category(', ');
-                                                                                                        if (!has_category()) echo "No categories..." ?></span></p>
-                            <p>Tags: <span <?php if (!has_tag()) echo 'class="no-tags"' ?>><?php the_tags('', ', ');
-                                                                                            if (!has_tag()) echo "No tags..." ?></span></p>
+                            ?> <p><?php printf(__('Posted in %s by %s', 'tema-aula'), get_the_date(), get_the_author_posts_link()); ?></p>
+                            <p><?php _e('Categories:', 'tema-aula'); ?> <span <?php if (!has_category()) echo 'class="no-tags"' ?>><?php the_category(', '); if (!has_category()) _e('No categories...', 'tema-aula'); ?></span></p>
+                            <p><?php _e('Tags:', 'tema-aula'); ?> <span <?php if (!has_tag()) echo 'class="no-tags"' ?>><?php the_tags('', ', '); if (!has_tag()) _e('No tags...', 'tema-aula'); ?></span></p>
                         </div>
                     </header>
                     <div>

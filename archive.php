@@ -17,7 +17,7 @@
                             the_posts_pagination();
                     else:
                         ?>
-                        <p>No post yet...</p>
+                        <p><?php _e('No post yet...', 'tema-aula'); ?></p>
                     <?php endif; ?>
                 </div>
                 <?php get_sidebar() ?>

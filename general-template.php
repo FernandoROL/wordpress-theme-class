@@ -21,7 +21,7 @@ Template Name: General Template
                         <?php
                         endwhile;
                     else: ?>
-                        <p>Nothing yet to be displayed!</p>
+                        <p><?php _e('Nothing yet to be displayed!', 'tema-aula')?></p>
                     <?php endif; ?>
                 </div>
             </div>

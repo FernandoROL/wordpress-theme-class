@@ -7,8 +7,8 @@ function wpdevs_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_copyright',
         [
-            'title' => 'Copywrite Settings',
-            'description' => 'Copywrite Settings'
+            'title' => __('Copyright Settings', 'tema-aula'),
+            'description' => __('Copyright Settings', 'tema-aula')
         ]
     );
 
@@ -18,7 +18,7 @@ function wpdevs_customizer( $wp_customize ){
             'set_copyright',
             [
                 'type' => 'theme_mod',
-                'default' => 'Cool copyright footer text',
+                'default' => __('Cool copyright footer text', 'tema-aula'),
                 'sanitize_callback' => 'sanitize_text_field'
             ]
         );
@@ -26,8 +26,8 @@ function wpdevs_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_copyright',
             [
-                'label' => 'Copyright information',
-                'description' => 'Please, type your copyright here',
+                'label' => __('Copyright information', 'tema-aula'),
+                'description' => __('Please, type your copyright here', 'tema-aula'),
                 'section' => 'sec_copyright',
                 'type' => 'text'
             ]
@@ -48,7 +48,7 @@ function wpdevs_customizer( $wp_customize ){
             'set_hero_title',
             [
                 'type' => 'theme_mod',
-                'default' => 'Please add a title',
+                'default' => __('Please add a title', 'tema-aula'),
                 'sanitize_callback' => 'sanitize_text_field'
             ]
         );
@@ -56,8 +56,8 @@ function wpdevs_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_hero_title',
             [
-                'label' => 'Hero title',
-                'description' => 'Type your title here',
+                'label' => __('Hero title', 'tema-aula'),
+                'description' => __('Type your title here', 'tema-aula'),
                 'section' => 'sec_hero',
                 'type' => 'text'
             ]
@@ -69,7 +69,7 @@ function wpdevs_customizer( $wp_customize ){
             'set_hero_subtitle',
             [
                 'type' => 'theme_mod',
-                'default' => 'Add your custom subtitle',
+                'default' => __('Add your custom subtitle', 'tema-aula'),
                 'sanitize_callback' => 'sanitize_textarea_field'
             ]
         );
@@ -77,8 +77,8 @@ function wpdevs_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_hero_subtitle',
             [
-                'label' => 'Hero subtitle',
-                'description' => 'Type your subtitle here',
+                'label' => __('Hero subtitle', 'tema-aula'),
+                'description' => __('Type your subtitle here', 'tema-aula'),
                 'section' => 'sec_hero',
                 'type' => 'textarea'
             ]
@@ -90,7 +90,7 @@ function wpdevs_customizer( $wp_customize ){
             'set_hero_button_text',
             [
                 'type' => 'theme_mod',
-                'default' => 'Button text',
+                'default' => __('Button text', 'tema-aula'),
                 'sanitize_callback' => 'sanitize_text_field'
             ]
         );
@@ -98,8 +98,8 @@ function wpdevs_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_hero_button_text',
             [
-                'label' => 'Hero button text',
-                'description' => 'Type your subtitle here',
+                'label' => __('Hero button text', 'tema-aula'),
+                'description' => __('Type your subtitle here', 'tema-aula'),
                 'section' => 'sec_hero',
                 'type' => 'text'
             ]
@@ -111,7 +111,7 @@ function wpdevs_customizer( $wp_customize ){
             'set_hero_button_link',
             [
                 'type' => 'theme_mod',
-                'default' => 'Button link',
+                'default' => __('Button link', 'tema-aula'),
                 'sanitize_callback' => 'esc_url_raw'
             ]
         );
@@ -119,8 +119,8 @@ function wpdevs_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_hero_button_link',
             [
-                'label' => 'Hero button link',
-                'description' => 'Type your hero button link here',
+                'label' => __('Hero button link', 'tema-aula'),
+                'description' => __('Type your hero button link here', 'tema-aula'),
                 'section' => 'sec_hero',
                 'type' => 'text'
             ]
@@ -140,8 +140,8 @@ function wpdevs_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_hero_height',
             [
-                'label' => 'Hero button link',
-                'description' => 'Hero height',
+                'label' => __('Hero button link', 'tema-aula'),
+                'description' => __('Hero height', 'tema-aula'),
                 'section' => 'sec_hero',
                 'type' => 'number'
             ]
@@ -160,7 +160,7 @@ function wpdevs_customizer( $wp_customize ){
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize,
             'set_hero_background',
             [
-                'label' => 'Hero background image',
+                'label' => __('Hero background image', 'tema-aula'),
                 'section' => 'sec_hero',
                 'mime_image' => 'image'
             ]
@@ -172,7 +172,7 @@ function wpdevs_customizer( $wp_customize ){
 	$wp_customize->add_section( 
         'sec_blog', 
         [
-		    'title' => 'Blog Section'
+		    'title' => __('Blog Section', 'tema-aula')
         ] 
     );
     
@@ -188,8 +188,8 @@ function wpdevs_customizer( $wp_customize ){
             $wp_customize->add_control( 
                 'set_per_page', 
                 [
-                    'label' => 'Posts per page',
-                    'description' => 'How many items to display in the post list?',			
+                    'label' => __('Posts per page', 'tema-aula'),
+                    'description' => __('How many items to display in the post list?', 'tema-aula'),			
                     'section' => 'sec_blog',
                     'type' => 'number'
                 ] 
@@ -207,8 +207,8 @@ function wpdevs_customizer( $wp_customize ){
             $wp_customize->add_control( 
                 'set_category_include', 
                 [
-                    'label' => 'Post categories to include',
-                    'description' => 'Comma separated values or single category ID',
+                    'label' => __('Post categories to include', 'tema-aula'),
+                    'description' => __('Comma separated values or single category ID', 'tema-aula'),
                     'section' => 'sec_blog',
                     'type' => 'text'
                 ] 
@@ -226,8 +226,8 @@ function wpdevs_customizer( $wp_customize ){
             $wp_customize->add_control( 
                 'set_category_exclude', 
                 [
-                    'label' => 'Post categories to exclude',
-                    'description' => 'Comma separated values or single category ID',			
+                    'label' => __('Post categories to exclude', 'tema-aula'),
+                    'description' => __('Comma separated values or single category ID', 'tema-aula'),			
                     'section' => 'sec_blog',
                     'type' => 'text'
                 ] 

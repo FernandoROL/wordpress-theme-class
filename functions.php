@@ -14,9 +14,13 @@ add_action('wp_enqueue_scripts', 'wpdevs_load_scripts');
 
 function main_config()
 {
+
+    $textdomain = 'tema-aula';
+    load_theme_textdomain( $textdomain, get_template_directory() . '/languages/');
+
     register_nav_menus([
-        'class_main_menu' => 'Main Menu',
-        'class_footer_menu' => 'Footer Menu'
+        'class_main_menu' => __('Main Menu', 'tema-aula'),
+        'class_footer_menu' => __('Footer Menu', 'tema-aula')
     ]);
 
     $args = [
@@ -43,9 +47,9 @@ function class_sidebars()
 {
     register_sidebar(
         [
-            'name' => 'Blog Sidebar',
+            'name' => __('Blog Sidebar', 'tema-aula'),
             'id' => 'blog-sidebar',
-            'description' => 'This is the Blog page sidebar. You can add your widgets here.',
+            'description' => __('This is the Blog page sidebar. You can add your widgets here.', 'tema-aula'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',
@@ -56,7 +60,7 @@ function class_sidebars()
         [
             'name'  => 'Service 1',
             'id'    => 'services-1',
-            'description'   => 'First Service Area',
+            'description'   => __('First Service Area', 'tema-aula'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="widget-title">',
@@ -67,7 +71,7 @@ function class_sidebars()
         [
             'name'  => 'Service 2',
             'id'    => 'services-2',
-            'description'   => 'Second Service Area',
+            'description'   => __('Second Service Area', 'tema-aula'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="widget-title">',
@@ -78,7 +82,7 @@ function class_sidebars()
         [
             'name'  => 'Service 3',
             'id'    => 'services-3',
-            'description'   => 'Third Service Area',
+            'description'   => __('Third Service Area', 'tema-aula'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="widget-title">',
@@ -89,7 +93,7 @@ function class_sidebars()
         [
             'name'  => 'Service 4',
             'id'    => 'services-4',
-            'description'   => 'Fourth Service Area',
+            'description'   => __('Fourth Service Area', 'tema-aula'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="widget-title">',
@@ -106,20 +110,5 @@ function custom_excerpt($lenght) {
 }
 
 function custom_get_excerpt($lenght) {
-    return wp_trim_words(get_the_content(), $lenght, '[...] <a href='. get_the_permalink() .'>read more</a>');
+    return wp_trim_words(get_the_content(), $lenght, '[...] <a href='. get_the_permalink() .'>'. __('read more', 'tema-aula') .'</a>');
 }
-
-// Changing the default template folder for all my templates
-
-// function load_templates_from_custom_folder($template) {
-//     $custom_template_folder = get_stylesheet_directory() . '/page-templates';
-//     $template_file = basename($template);
-//     $custom_template = $custom_template_folder . $template_file;
-
-//     if (file_exists($custom_template)) {
-//         return $custom_template;
-//     }
-
-//     return $template;
-// }
-// add_filter('template_include', 'load_templates_from_custom_folder');

@@ -4,7 +4,7 @@
         <main id="main" class="site-main">
             <?php get_template_part('parts/home/widget', 'hero') ?>
             <section class="services">
-                <h2>Our Services</h2>
+                <h2><?php _e('Our Services', 'tema-aula') ?></h2>
                 <div class="container">
                     <?php get_template_part('parts/home/widget', 'services') ?>
                 </div>
