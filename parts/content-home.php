@@ -28,14 +28,14 @@ $category_exclude = get_theme_mod('set_category_exclude');
     <div class="meta-info">
         <p>
             <?php _e('by', 'tema-aula') ?> <span><?php the_author_posts_link() ?></span>
-            <?php _e('Categories', 'tema-aula') ?>: <span <?php if (!has_category()) echo 'class="no-tags"' ?> ><?php the_category(', ');
-                                                                                    if (!has_category()) echo __('No categories', 'tema-aula') ."..." ?></span>
-            <?php _e('Tags', 'tema-aula') ?> <span <?php if (!has_tag()) echo 'class="no-tags"' ?> ><?php the_tags('', ', ');
-                                                                            if (!has_tag()) echo __('No tags', 'tema-aula') ."..." ?></span>
+            <?php _e('Categories', 'tema-aula') ?>: <span <?php if (!has_category()) echo esc_attr('class="no-tags"') ?> ><?php the_category(', ');
+                                                                                    if (!has_category()) _e('No categories', 'tema-aula') ."..." ?></span>
+            <?php _e('Tags', 'tema-aula') ?> <span <?php if (!has_tag()) echo esc_attr('class="no-tags"') ?> ><?php the_tags('', ', ');
+                                                                            if (!has_tag()) _e('No tags', 'tema-aula') ."..." ?></span>
         </p>
-        <p><span><?php echo get_the_date() ?></span></p>
+        <p><span><?php echo esc_html(get_the_date()) ?></span></p>
     </div>
-    <p><?php echo custom_get_excerpt(25) ?></p>
+    <p><?php echo esc_html(custom_get_excerpt(25)) ?></p>
 </article> 
 <?php
         endwhile;
